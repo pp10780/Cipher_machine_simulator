@@ -10,7 +10,7 @@ The project is divided into three main directories:
 - `server/`: Contains the source code, object files, and executable for the server. This includes the main server code as well as additional modules for handling connections and a container list.
 - `crypto/`: Contains the source code, object file, and header for the OpenSSL encryption and decryption functions.
 
-The root directory also contains a `Makefile` for building the project, a `run.sh` script for compiling and running the server and client, and a `.vscode/` directory with configuration files for Visual Studio Code.
+The root directory also contains a `Makefile` for building the project.
 
 ## Building the Project
 
@@ -23,7 +23,7 @@ This will compile the source code and create the executables in the client/ and 
 
 # Debugging
 
-To build the project with debug symbols, use the `deb´ target in the Makefile:
+To build the project with debug symbols, use the `deb` target in the Makefile:
 ```sh
 make deb
 ```
