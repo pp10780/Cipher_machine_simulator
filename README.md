@@ -1,19 +1,29 @@
-## Rules
+# Secure Server-Client Communication
 
-# SERVER POV
-1. The first byte specifies if the incoming packet should be encrypted ('0') or decrypted ('1')
-2. The second byte contains the ID of the container
-3. The ID 0 is saved from new containers don't have an ID yet.
+This project implements a secure server-client communication system using OpenSSL for encryption and decryption.
 
-# CLIENT POV
-1. The first byte of the incoming packet specifies the ID of the client's container
-2. The following bytes correspond to the rest of the data of the container
+## Project Structure
 
+The project is divided into three main directories:
 
-## Next Steps
+- `client/`: Contains the source code, object file, and executable for the client.
+- `server/`: Contains the source code, object files, and executable for the server. This includes the main server code as well as additional modules for handling connections and a container list.
+- `crypto/`: Contains the source code, object file, and header for the OpenSSL encryption and decryption functions.
 
-1. Change the size of the buffer to a bigger value so that it can afford every type of buffer requests and use the return from read (number of bytes) to do the following operations
+The root directory also contains a `Makefile` for building the project, a `run.sh` script for compiling and running the server and client, and a `.vscode/` directory with configuration files for Visual Studio Code.
 
-In the real implementation the length and the startdataunitNo must both be sent in a first connection
+## Building the Project
 
-In this test implementation the buffer is being received and the length is received as it is always the length of the message
+To build the project, run the following command in the root directory:
+
+```sh
+make
+```
+This will compile the source code and create the executables in the client/ and server/ directories.
+
+# Debugging
+
+To build the project with debug symbols, use the `deb´ target in the Makefile:
+```sh
+make deb
+```
