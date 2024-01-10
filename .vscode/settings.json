@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "container_list.h": "c",
+        "connection.h": "c",
+        "defs.h": "c"
+    }
+}
