@@ -98,9 +98,6 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
 
 void generate_key(unsigned char* key)
 {
-  memset(key, 0, KEY_LEN/2);
-  memset(key + KEY_LEN/2, 1, KEY_LEN/2);
-  return;
   if(!RAND_bytes(key, KEY_LEN))
     handleErrors();
 }

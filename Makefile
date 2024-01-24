@@ -11,16 +11,16 @@ endif
 OPENSSL_LIB := -lssl -lcrypto
 
 # Source files
-CLIENT_SRC := client/client.c crypto/ssl-encrypt.c
-SERVER_SRC := server/server.c server/connection.c server/container_list.c crypto/ssl-encrypt.c
+CLIENT_SRC := test_client/client.c crypto/ssl-encrypt.c
+SERVER_SRC := external_module/server.c external_module/connection.c external_module/container_list.c crypto/ssl-encrypt.c
 
 # Object files
 CLIENT_OBJ := $(CLIENT_SRC:.c=.o)
 SERVER_OBJ := $(SERVER_SRC:.c=.o)
 
 # Executables
-CLIENT := client/client
-SERVER := server/server
+CLIENT := test_client/client
+SERVER := external_module/extmod
 
 all: $(CLIENT) $(SERVER)
 
